@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Benji img</title>
+    </head>
+    <body>
+        <h1>Benji IMG</h1>
+        <form id="upload">
+            <input type="file" id="files" />
+            <input type="submit" value="upload" />
+        </form>
+    </body>
+    <script>
+        document.querySelector('#upload').addEventListener('submit', function(evt) {
+            evt.preventDefault();
+            
+            var file = document.querySelector('#files').files[0];
+            console.log(file);
+            fetch('api/files', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'binary',
+
+                },
+                body: file,
+            }).then(function(response){
+                console.log('in first then...')
+                return response.json();
+            }).then(function(success){
+                console.log('in success...')
+                console.log(success);
+            });
+            console.log('submitted');
+            return false;
+        })
+    </script>
+</html>
