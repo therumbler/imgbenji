@@ -108,3 +108,4 @@ venv.bak/
 
 # Img Benji
 static/images/
+node_modules/

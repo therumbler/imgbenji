@@ -1,0 +1,35 @@
+{
+  "name": "imgbenji",
+  "version": "0.0.1",
+  "description": "An imgur clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:therumbler/imgbenji.git"
+  },
+  "keywords": [
+    "images",
+    "share"
+  ],
+  "author": "Benjamin Rumble",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-stage-3": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.8",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0"
+  }
+}
